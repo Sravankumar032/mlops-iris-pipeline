@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/Dell/mlops-iris-pipeline/mlruns/280558315303770697/cf84cf08fe374881891d591206c1dd5c/artifacts
+end_time: 1754589216840
+entry_point_name: ''
+experiment_id: '280558315303770697'
+lifecycle_stage: active
+run_id: cf84cf08fe374881891d591206c1dd5c
+run_name: RandomForest
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754589210559
+status: 3
+tags: []
+user_id: Dell

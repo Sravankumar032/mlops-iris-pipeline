@@ -1,0 +1,6 @@
+artifact_location: file:///C:/Users/Dell/mlops-iris-pipeline/mlruns/280558315303770697
+creation_time: 1754589042557
+experiment_id: '280558315303770697'
+last_update_time: 1754589042557
+lifecycle_stage: active
+name: Iris_Classification
