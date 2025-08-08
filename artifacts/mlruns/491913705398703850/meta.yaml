@@ -1,0 +1,6 @@
+artifact_location: file:///workspaces/mlops-iris-pipeline/artifacts/mlruns/491913705398703850
+creation_time: 1754678788423
+experiment_id: '491913705398703850'
+last_update_time: 1754678788423
+lifecycle_stage: active
+name: Iris_Classification

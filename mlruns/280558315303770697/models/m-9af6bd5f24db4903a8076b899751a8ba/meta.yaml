@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/Dell/mlops-iris-pipeline/mlruns/280558315303770697/models/m-9af6bd5f24db4903a8076b899751a8ba/artifacts
+creation_timestamp: 1754676052577
+experiment_id: '280558315303770697'
+last_updated_timestamp: 1754676055074
+model_id: m-9af6bd5f24db4903a8076b899751a8ba
+model_type: null
+name: model
+source_run_id: dcea18f847e448dba4216bbec3755f44
+status: 3
+status_message: null
