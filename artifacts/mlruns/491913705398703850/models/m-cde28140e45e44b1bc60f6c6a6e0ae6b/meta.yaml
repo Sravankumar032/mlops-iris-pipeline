@@ -1,0 +1,10 @@
+artifact_location: file:///workspaces/mlops-iris-pipeline/artifacts/mlruns/491913705398703850/models/m-cde28140e45e44b1bc60f6c6a6e0ae6b/artifacts
+creation_timestamp: 1754681712823
+experiment_id: '491913705398703850'
+last_updated_timestamp: 1754681715076
+model_id: m-cde28140e45e44b1bc60f6c6a6e0ae6b
+model_type: null
+name: model
+source_run_id: ee3a2bfb57f345cc89ee4c5a39eba7a1
+status: 2
+status_message: null
