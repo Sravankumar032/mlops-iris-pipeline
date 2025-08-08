@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import joblib
 import mlflow
@@ -15,10 +16,18 @@ from src.utils.metrics import (
     print_classification_report,
 )
 
-# Load data
-df = pd.read_csv("data/raw/iris.csv")
+# -----------------------
+# Safe model directory inside project
+# -----------------------
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # src/models/
+PROJECT_ROOT = os.path.abspath(os.path.join(BASE_DIR, "../../"))  # root of repo
+MODEL_DIR = os.path.join(PROJECT_ROOT, "artifacts", "models")
+os.makedirs(MODEL_DIR, exist_ok=True)
 
-# If target column is string, encode it
+# Load data
+df = pd.read_csv(os.path.join(PROJECT_ROOT, "data", "raw", "iris.csv"))
+
+# Encode target if needed
 if df["target"].dtype == "object":
     le = LabelEncoder()
     df["target"] = le.fit_transform(df["target"])
@@ -44,8 +53,10 @@ def train_and_log_model(model, model_name):
         print_confusion_matrix(y_test, preds)
         print_classification_report(y_test, preds)
 
-        # Save locally
-        joblib.dump(model, f"models/{model_name}.pkl")
+        # Save model safely inside artifacts/models/
+        model_path = os.path.join(MODEL_DIR, f"{model_name}.pkl")
+        joblib.dump(model, model_path)
+        print(f"Model saved at: {model_path}")
         
         # Log model to MLflow
         mlflow.sklearn.log_model(model, "model", registered_model_name=model_name)
