@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/Dell/mlops-iris-pipeline/mlruns/280558315303770697/a8cb01dd0fd748cc9887db42538b002a/artifacts
+end_time: 1754674110127
+entry_point_name: ''
+experiment_id: '280558315303770697'
+lifecycle_stage: active
+run_id: a8cb01dd0fd748cc9887db42538b002a
+run_name: LogisticRegression
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754674107156
+status: 4
+tags: []
+user_id: codespace
