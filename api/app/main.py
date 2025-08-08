@@ -10,8 +10,9 @@ model = load_model("models/LogisticRegression.pkl")
 def read_root():
     return {"message": "Welcome to the Iris Predictor API!"}
 
-@app.post("/predict")
-def predict_species(input_data: IrisRequest):
-    data = input_data.dict()
-    prediction = make_prediction(model, data)
-    return {"prediction": prediction}
+    @app.post("/predict")
+    def predict_species(input_data: IrisRequest):
+        data = input_data.dict()
+            prediction = make_prediction(model, data)
+                return {"prediction": prediction}
+    
