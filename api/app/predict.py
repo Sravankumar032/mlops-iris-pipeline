@@ -16,4 +16,8 @@ def make_prediction(model, input_data):
         "petal width (cm)"
     ]
     prediction = model.predict(df)
+<<<<<<< HEAD
     return LABELS[int(prediction[0])]  
+=======
+    return LABELS[int(prediction[0])]  
+>>>>>>> 5fe02e1 (commit)
