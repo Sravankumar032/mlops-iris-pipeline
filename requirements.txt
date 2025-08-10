@@ -7,3 +7,5 @@ pydantic
 pandas
 pytest
 mlflow
+prometheus_client
+"uvicorn[standard]"
