@@ -1,0 +1,38 @@
+grafana       | logger=grafana-apiserver t=2025-08-10T20:51:38.768796831Z level=info msg="Adding GroupVersion dashboard.grafana.app v2alpha1 to ResourceManager"
+grafana       | logger=grafana-apiserver t=2025-08-10T20:51:38.770850938Z level=info msg="Adding GroupVersion folder.grafana.app v1beta1 to ResourceManager"
+grafana       | logger=grafana-apiserver t=2025-08-10T20:51:38.77456163Z level=info msg="Adding GroupVersion iam.grafana.app v0alpha1 to ResourceManager"
+grafana       | logger=grafana-apiserver t=2025-08-10T20:51:38.777365839Z level=info msg="Adding GroupVersion playlist.grafana.app v0alpha1 to ResourceManager"
+grafana       | t=2025-08-10T20:51:38.777749613Z level=info caller=logger.go:214 time=2025-08-10T20:51:38.777741728Z msg="Installed APIs for app" app=playlist
+grafana       | logger=grafana-apiserver t=2025-08-10T20:51:38.777960176Z level=info msg="Skipping API plugins.grafana.app/v0alpha1 because it has no resources."
+grafana       | t=2025-08-10T20:51:38.778038242Z level=info caller=logger.go:214 time=2025-08-10T20:51:38.778032271Z msg="Installed APIs for app" app=plugins
+grafana       | logger=app-registry t=2025-08-10T20:51:38.89946237Z level=info msg="app registry initialized"
+grafana       | t=2025-08-10T20:51:38.899689444Z level=info caller=logger.go:214 time=2025-08-10T20:51:38.89968142Z msg="App initialized" app=playlist
+grafana       | t=2025-08-10T20:51:38.90167651Z level=info caller=logger.go:214 time=2025-08-10T20:51:38.901664588Z msg="App initialized" app=plugins
+mlops-api     | INFO:     172.18.0.4:52858 - "GET /metrics HTTP/1.1" 200 OK
+mlops-api     | INFO:     172.18.0.4:52858 - "GET /metrics HTTP/1.1" 200 OK
+mlops-api     | INFO:     172.18.0.4:52858 - "GET /metrics HTTP/1.1" 200 OK
+mlops-api     | INFO:     172.18.0.4:52858 - "GET /metrics HTTP/1.1" 200 OK
+mlops-api     | INFO:     172.18.0.4:52858 - "GET /metrics HTTP/1.1" 200 OK
+mlops-api     | 2025-08-10 21:00:46,918 - INFO - Request: {'sepal_length': 0.0, 'sepal_width': 0.0, 'petal_length': 0.0, 'petal_width': 0.0} | Prediction: setosa
+mlops-api     | INFO:     172.18.0.1:34898 - "POST /predict HTTP/1.1" 200 OK
+mlops-api     | INFO:     172.18.0.4:52754 - "GET /metrics HTTP/1.1" 200 OK
+mlops-api     | INFO:     172.18.0.4:52754 - "GET /metrics HTTP/1.1" 200 OK
+mlops-api     | INFO:     172.18.0.4:52754 - "GET /metrics HTTP/1.1" 200 OK
+mlops-api     | INFO:     172.18.0.4:52754 - "GET /metrics HTTP/1.1" 200 OK
+mlops-api     | INFO:     172.18.0.4:52754 - "GET /metrics HTTP/1.1" 200 OK
+mlops-api     | INFO:     172.18.0.4:52754 - "GET /metrics HTTP/1.1" 200 OK
+mlops-api     | INFO:     172.18.0.4:52754 - "GET /metrics HTTP/1.1" 200 OK
+mlops-api     | INFO:     172.18.0.4:52754 - "GET /metrics HTTP/1.1" 200 OK
+mlops-api     | INFO:     172.18.0.4:52754 - "GET /metrics HTTP/1.1" 200 OK
+mlops-api     | INFO:     172.18.0.4:52754 - "GET /metrics HTTP/1.1" 200 OK
+mlops-api     | INFO:     172.18.0.4:52754 - "GET /metrics HTTP/1.1" 200 OK
+grafana       | logger=cleanup t=2025-08-10T21:01:37.841013536Z level=info msg="Completed cleanup jobs" duration=3.67563ms
+grafana       | logger=plugins.update.checker t=2025-08-10T21:01:38.593018834Z level=info msg="Update check succeeded" duration=287.84086ms
+mlops-api     | INFO:     172.18.0.4:52754 - "GET /metrics HTTP/1.1" 200 OK
+mlops-api     | INFO:     172.18.0.4:52754 - "GET /metrics HTTP/1.1" 200 OK
+mlops-api     | 2025-08-10 21:01:49,194 - INFO - Request: {'sepal_length': 0.0, 'sepal_width': 0.0, 'petal_length': 0.0, 'petal_width': 0.0} | Prediction: setosa
+mlops-api     | INFO:     172.18.0.1:43294 - "POST /predict HTTP/1.1" 200 OK
+mlops-api     | INFO:     172.18.0.4:52754 - "GET /metrics HTTP/1.1" 200 OK
+mlops-api     | 2025-08-10 21:01:54,232 - INFO - Request: {'sepal_length': 5.1, 'sepal_width': 3.5, 'petal_length': 1.4, 'petal_width': 0.2} | Prediction: setosa
+mlops-api     | INFO:     172.18.0.1:57962 - "POST /predict HTTP/1.1" 200 OK
+mlops-api     | INFO:     172.18.0.4:52754 - "GET /metrics HTTP/1.1" 200 OK

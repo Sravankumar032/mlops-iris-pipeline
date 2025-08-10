@@ -1,0 +1,14 @@
+artifact_uri: file:///workspaces/mlops-iris-pipeline/artifacts/mlruns/491913705398703850/ba7f0edd8ec14646b60f5e299eb89d49/artifacts
+end_time: 1754858654171
+entry_point_name: ''
+experiment_id: '491913705398703850'
+lifecycle_stage: active
+run_id: ba7f0edd8ec14646b60f5e299eb89d49
+run_name: RandomForestClassifier
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754858651915
+status: 3
+tags: []
+user_id: codespace

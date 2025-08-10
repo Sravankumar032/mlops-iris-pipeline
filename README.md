@@ -7,6 +7,10 @@ git add . -f
 git commit -m "Commit After enabling Monitor & logging part"
 git push origin main
 
+# Read & Process iris Data
+python -m src.data.load_data
+python -m src.data.preprocess
+
 # Create virtual environment
 python3 -m venv venv
 source venv/bin/activate
@@ -22,17 +26,14 @@ mlflow ui --backend-store-uri artifacts/mlruns
 Local Host: http://127.0.0.1:5000
 
 # Build Docker Image
-docker build -t iris-api .
-docker rm -f mlops-api
-docker build -t mlops-api:latest .
+docker build -t iris-api . (Test)
+docker rm -f mlops-api (Test)
+docker build -t mlops-api:latest . (main)
 
 # Run Docker Container (Expose API)
-docker run -p 8000:8000 iris-api
-docker run -d -p 8000:8000 --name mlops-api mlops-api:latest
-
-# Example Test API
-https://verbose-capybara-6954pprqggjxc57r9-8000.app.github.dev/docs
-https://verbose-capybara-6954pprqggjxc57r9-8000.app.github.dev/metrics
+docker compose up --build
+docker run -p 8000:8000 iris-api (Optional)
+docker run -d -p 8000:8000 --name mlops-api mlops-api:latest (Optional)
 
 # Input Json
 {
@@ -42,6 +43,17 @@ https://verbose-capybara-6954pprqggjxc57r9-8000.app.github.dev/metrics
   "petal_width": 0.2
 }
 
+# Other User Full Commands
+docker rm -f prometheus
+docker rm -f grafana
+docker rm -f mlops-api
+docker compose down
+docker compose up --build
+
 # Resources
-# DockerHub Link
-https://hub.docker.com/repositories/sravanmlops01
+GitHub Link: https://hub.docker.com/repositories/sravanmlops01
+IRIS Prediction API: https://zany-trout-975jxxqr979739p6v-8000.app.github.dev/docs
+API Metrics: https://zany-trout-975jxxqr979739p6v-8000.app.github.dev/metrics
+prometheus: https://zany-trout-975jxxqr979739p6v-9090.app.github.dev/
+Grafana Dashboard: https://zany-trout-975jxxqr979739p6v-3000.app.github.dev/
+Data Source COnnection in Grafana: http://prometheus:9090
