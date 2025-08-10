@@ -1,4 +1,5 @@
 import os
+import sys
 import logging
 from fastapi import FastAPI
 from api.app.predict import load_model, make_prediction
@@ -11,10 +12,19 @@ os.makedirs("logs", exist_ok=True)
 
 # Configure logging
 logging.basicConfig(
-    filename="logs/predictions.log",
     level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.FileHandler("logs/predictions.log", mode='a', encoding='utf-8'),
+        logging.StreamHandler(sys.stdout)  # Also print logs in the terminal
+    ]
 )
+
+# Create a logger instance
+logger = logging.getLogger(__name__)
+
+# Test log to verify logging works
+logger.info("App started successfully and logging is working!")
 
 app = FastAPI(title="Iris Prediction API")
 
